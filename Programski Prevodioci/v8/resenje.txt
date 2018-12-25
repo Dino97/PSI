@@ -1,0 +1,68 @@
+Zadatak 1
+
+program
+  : global_list function_list
+    { ... }
+  ;
+
+global_list
+  : /* empty */
+  | global_list global_var
+  ; 
+
+global_var
+  : type _ID _SEMICOLON
+      { 
+        insert_symbol($2, GVAR, $1, NO_ATR, NO_ATR);
+        code("\n%s:\n\t\t\tWORD\t1", $2);
+      }
+  ;
+
+
+// definisati novu vrstu simblola GVAR
+// ubaciti na kraj enumeracije kinds (defs.h)
+GVAR = 0x40 
+
+
+// u iskazu dodele omoguciti pojavu globalne promenljive sa leve strane znaka jednako
+assignment_statement
+  : _ID _ASSIGN num_exp _SEMICOLON
+      {
+        int i;
+        if( (i = lookup_symbol($1, (VAR|PAR|GVAR))) == -1 )
+          err("invalid lvalue '%s' in assignment", $1);
+        ...
+      }
+  ;
+
+// omoguciti pojavu globalne promenljive u izrazima 
+exp
+  : _ID
+      {
+        if( ($$ = lookup_symbol($1, (VAR|PAR|GVAR))) == -1)
+          err("'%s' undeclared", $1);
+      }
+   ...
+  ;
+
+
+
+Zadatak 2
+
+inc_statement
+  : _ID _INC _SEMICOLON
+      {
+        int idx = lookup_symbol($1, (VAR|PAR|GVAR));
+        if (idx == -1)
+          err("'%s' undeclared", $1);
+        code("\n\t\t\t%s\t", get_arop_stmt(ADD, get_type(idx)));
+        print_symbol(idx);
+        code(",$1,");
+        print_symbol(idx);
+      }
+  ;
+
+
+
+
+
