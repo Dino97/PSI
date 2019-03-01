@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> Registracija </title>
+    </head>
+    <body>
+        <h3> Produzenje registracije </h3>
+
+        <p> Na ovoj stranici mozete obaviti produzenje registracije Vaseg automobila.<br>
+        Molimo Vas da popunite sledeci formular.</p>
+
+        <form action="zad2_registrovani.html">
+            <table border="1" bgcolor="#c1c1c1">
+                <tr><th colspan="2">Produzenje registracije</th></tr>
+                <tr><td>Ime:</td><td><input name="ime" type="text"></td></tr>
+                <tr><td>Prezime:</td><td><input name="prezime" type="text" autofocus></td></tr>
+                <tr><td>JMBG:</td><td><input name="JMBG" type="text" required></td></tr>
+                <tr><td>Marka vozila:</td><td><input name="marka" list="marke"></td></tr>
+                <tr><td>Boja vozila:</td><td><input name="boja" type="color"></td></tr>
+                <tr><td>Tip vozila:</td><td><input name="tipVozila" type="text"></td></tr>
+                <tr><td>Registarska oznaka:</td><td><input name="regOznaka" type="text"></td></tr>
+                <tr><td>Prethodna registracija:</td><td><input name="regOznaka" type="date"></td></tr>
+                <tr><td align="center" colspan="2"><input type="submit" value="Posalji"></td></tr>
+            </table>
+        </form>
+
+        <datalist id="marke">
+            <option value="Mercedes"></option>
+            <option value="Peugeot"></option>
+            <option value="Renault"></option>
+        </datalist>
+    </body>
+</html>
