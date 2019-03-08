@@ -1,0 +1,32 @@
+h1 {
+    color: blue;
+    font-size: 16px;
+}
+
+th {
+    color: blue;
+    background-color: darkgray;
+    font-size: 14px;
+}
+
+tr {
+    font-size: 12px;
+}
+
+p {
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type=text] {
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parni {
+    background-color: lightgray;
+}
+
+.neparni {
+    background-color: gray;
+}

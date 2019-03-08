@@ -1,0 +1,28 @@
+p {
+    color: #f03030;
+    font-family: Georgia, serif
+}
+
+.img1 {
+    border: 1px #f03030 solid;
+    padding: 5px;
+    margin: 10px;
+}
+
+.img2 {
+    width: 100%;
+    height: 130px;
+}
+
+.bordered:hover {
+    border: 1px #f03030 solid;
+}
+
+.column {
+    float: left;
+    padding: 5px;
+    border: 1px #f03030 solid;
+    padding: 4px;
+    margin: 1px;
+    width: 160px;
+}

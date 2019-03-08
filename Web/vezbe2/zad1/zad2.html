@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Registracija</title>
+		<link rel="stylesheet" href="zad2.css">
+	</head>
+	<body>
+		<h1>Produzenje registracije</h1>
+		<p> Na ovoj stranici mozete obaviti produzenje registracije Vaseg automobila. Molimo Vas da popunite sledeci formular. </p>
+		<form action="./zad2a.html">
+			<table border="1" bgcolor="#999999">
+				<tr><th colspan="2">Produzenje registracije</th></tr>
+				<tr><td class="neparni">Ime:</td><td><input type="text" name="ime"></td></tr>
+				<tr><td class="parni">Prezime:</td><td><input type="text" name="prezime"></td></tr>
+				<tr><td class="neparni">JMBG:</td><td><input type="text" name="jmbg"></td></tr>
+				<tr>
+					<td class="parni">Marka vozila:</td>
+					<td class="parni">
+						<select name="marka">
+  							<option value="volvo">Volvo</option>
+  							<option value="mercedes">Mercedes</option>
+  							<option value="audi">Audi</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td class="neparni">Tip vozila:</td><td><input type="text" name="tip"></td></tr>
+				<tr><td class="parni">Registarska oznaka:</td><td><input type="text" name="reg_br"></td></tr>
+				<tr><td colspan="2" align="center" class="neparni"><input type="submit" value="Posalji"></th></tr>
+			</table>
+		</form>
+	</body>
+</html>
